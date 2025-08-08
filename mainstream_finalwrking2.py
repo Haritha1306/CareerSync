@@ -539,7 +539,7 @@ elif st.session_state['current_page'] == "Mock Interview":
 
     # Start Mock Interview
     if st.session_state.interview_started:
-        fetched_api_key = "AIzaSyBK0SiTqoyTC41vhl-8V0ag4o8y27xll6w"
+        fetched_api_key = ""
         genai.configure(api_key=fetched_api_key)
         model = genai.GenerativeModel("gemini-pro") 
         chat = model.start_chat()
@@ -646,3 +646,4 @@ elif st.session_state['current_page'] == "Mock Interview":
             st.session_state.interview_started = False
             st.session_state.question_index = 0
             st.write("Thank you for participating in the Mock Interview!")
+
